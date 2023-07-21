@@ -17,7 +17,7 @@ yarn install
 
 2. Run the migrations
 
-Verify your .env file to connect your back-end to MySQL:
+Verify your .env file to connect your back-end to MySQL. If you don't have this file, make a copy of .env.example and modify this lines:
 
 ```sh
 DB_CONNECTION=mysql
