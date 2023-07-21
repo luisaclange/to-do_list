@@ -1,3 +1,4 @@
+import { AxiosError } from 'axios';
 import api from '../helpers/api';
 import type { ITask } from '../interfaces/ITask';
 
@@ -9,6 +10,7 @@ export default async function updateDescription(newDescription: string, task: IT
     const indexTask = tasks.findIndex(item => item.id === task.id);
     if (indexTask >= 0) tasks[indexTask].description = aux.data.description;
   } catch (error) {
-    console.error('Erro ao atualizar descrição: ', error);
+    if (error instanceof AxiosError)
+      alert(`Erro ao atualizar a descrição da tarefa: ${error?.response?.data?.message}`)
   }
 }

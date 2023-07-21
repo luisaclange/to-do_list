@@ -1,3 +1,4 @@
+import { AxiosError } from 'axios';
 import api from '../helpers/api';
 import type { ITask } from '../interfaces/ITask';
 
@@ -7,6 +8,7 @@ export default async function markAsFinished(task: ITask, tasks: ITask[]) {
     const indexTask = tasks.findIndex(item => item.id === task.id);
     if (indexTask >= 0) tasks[indexTask].done = aux.data.done;
   } catch (error) {
-    console.error('Erro ao marcar como feito/desfeito: ', error);
+    if (error instanceof AxiosError)
+      alert(`Erro ao marcar tarefa como feita: ${error?.response?.data?.message}`)
   }
 }

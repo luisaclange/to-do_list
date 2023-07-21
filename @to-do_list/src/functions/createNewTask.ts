@@ -1,3 +1,4 @@
+import { AxiosError } from 'axios';
 import api from '../helpers/api';
 import type { ITask } from '../interfaces/ITask';
 
@@ -8,6 +9,7 @@ export default async function createNewTask(newTask: string, tasks: ITask[]) {
     })
     tasks.unshift(aux.data);
   } catch (error) {
-    console.error('Erro ao criar componente: ', error)
+    if (error instanceof AxiosError)
+      alert(`Erro ao criar tarefa: ${error?.response?.data?.message}`)
   }
 }
