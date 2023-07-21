@@ -1,12 +1,12 @@
 ## About the app
 
-To-do List is a application thats using Vue.JS, Quasar, Laravel and MySQL.
+To-do List is a application that using Vue.JS, Quasar, Laravel and MySQL.
 
 You can add a task, edit your description, mark it as done and you can delete it too.
 
 ## How to run the application
 
-After you clonning the repository in a folder on your computer, run this steps:
+After you cloning the repository in a folder on your computer, run this steps:
 
 1. Install the dependencies of your back-end project:
 
@@ -17,7 +17,7 @@ yarn install
 
 2. Run the migrations
 
-Verify your .env file to connect your back-end to MySQL:
+Verify your .env file to connect your back-end to MySQL. If you don't have this file, make a copy of .env.example and modify this lines:
 
 ```sh
 DB_CONNECTION=mysql
