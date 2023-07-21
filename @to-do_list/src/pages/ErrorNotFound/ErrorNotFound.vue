@@ -1,27 +1,21 @@
 <template>
-  <div class="fullscreen bg-blue text-white text-center q-pa-md flex flex-center">
-    <div>
-      <div style="font-size: 30vh">
+  <div>
+      <h2>
         404
-      </div>
+      </h2>
 
-      <div class="text-h2" style="opacity:.4">
-        Oops. Nothing here...
-      </div>
+      <h4>
+        Oops! Não há nada aqui...
+      </h4>
 
       <q-btn
-        class="q-mt-xl"
-        color="white"
-        text-color="blue"
+        class="buttonBackToHome"
         unelevated
         to="/"
-        label="Go Home"
+        label="Voltar à página inicial"
         no-caps
       />
-    </div>
   </div>
 </template>
 
-<script setup lang="ts">
-
-</script>
+<style scoped src="./styles.css"></style>
