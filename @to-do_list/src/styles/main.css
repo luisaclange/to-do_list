@@ -1,0 +1,9 @@
+@import './base.css';
+
+.app {
+  font-weight: normal;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}

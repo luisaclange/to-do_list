@@ -1,0 +1,59 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --white: #fff; 
+
+  --black: #000;
+
+  --violet-200: #6352a0;
+  --blue-500: #4e28d4;
+  --blue-700: #382679;
+
+  --red-500: #ff2d43;
+  --red-800: #932530;
+
+  --green-500: #249044;
+  --green-800: #225d2d;
+
+  --grey-100: #d1d1d1;
+  --grey-300: #969696;
+  --grey-400: #808080;
+  --grey-600: #474747;
+  --grey-800: #2e2e2e;
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-background: var(--white);
+  --color-text: var(--black);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--grey-800);
+    --color-text: var(--white);
+  }
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  
+  background: var(--color-background);
+  line-height: 1.6;
+  color: var(--color-text);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body, button, input, textarea {
+  font-size: 1rem;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+}
