@@ -7,9 +7,6 @@ async function getTasks(tasks: ITask[]) {
     const aux = await api.get('/tasks');
     aux.data
       .filter((item: ITask) => !item.deleted_at)
-      .sort((itemA: ITask, itemB: ITask) =>
-        new Date(itemA.created_at).getTime() - new Date(itemB.created_at).getTime()
-      )
       .forEach((task: ITask) => {
         tasks.push(task);
       });
